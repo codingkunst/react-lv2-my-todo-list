@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# My Todo List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Goal
+- **react-router-dom**, **styled-components**, **redux를 사용해서 My Todo List** 를 사용해서 만들기
 
-## Available Scripts
+### Features
+- Create Todo
+- Read Todos, Todo
+- Update Todo
+- Delete Todo
 
-In the project directory, you can run:
+### Requirement
+- 공통
+  - **todos 데이터는 리덕스를 사용해서 전역으로 상태를 관리합니다.**
+  - todos 모듈은 **`Ducks 패턴`**으로 구현합니다.
+- 메인 페이지
+  - **디자인과 화면 구성은 자유롭게 구현합니다.**
+  - **Todo의 상태에 “완료” 그룹과 “진행중" 그룹을 나뉘어서 보이도록 구현**합니다. 예시 영상 꼭 위, 아래가 아니어도 되며 창의적으로 구현해도 됩니다.
+  - **Todo를 추가하면  제목 `input`과 내용 `input`은 다시 빈 값이 되도록 구현**합니다
+  - **input에 값이 있는 상태에서 상세페이지로 이동하는 경우, input의 value가 초기화** 되도록 구현합니다.    
+  - Todo의 완료상태**가 `true`**이면**,** 상태 버튼의 라벨을 **“취소”,  `false`** 이면 라벨을 “**완료”** 로 보이도록 구현합니다.
+  - 전체 화면의 **최대 넓이는 `1200px`, 최소 넓이는 `800px`로 제한**하고, **컨텐츠를 화면의 가운데로 배치** 합니다.
+  - `상세보기` 클릭하면 **Todo의 상세 페이지로 이동**합니다. 상세 페이지에서 보여야 하는 내용은 아래 토글에서 별도 안내합니다.
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Why?
+1. 상세 페이지 이동을 위해 react-router-dom 라이브러리를 사용하셨을 거예요, **CRA 라우팅이란 무엇인가요**?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Redux를 사용하여 애플리케이션의 상태 관리를 하셨을 것입니다. **어떤 상태들을 Redux로 관리하셨나요?** **그 상태 값을 Redux를 통해 관리함으로 얻은 이점은 무엇이었나요**?
 
-### `yarn test`
+3. Redux의 reducer 함수는가 애플리케이션 로직과 **어떻게 상호작용하는지 설명해 주세요**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. CSS in JS 라이브러리 중 하나인 "styled component"를 사용했을 때의 이점은 많습니다.  **CSS in JS가 제공하는 이점을 두 가지만 설명해 주세요.**
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. useEffect hook을 사용한 부분이 있다면, **왜 사용해야 했고, 해당 hook이 언제 실행되는지 설명해주세요**.
